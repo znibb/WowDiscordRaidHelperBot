@@ -18,6 +18,7 @@ services:
     restart: unless-stopped
     volume:
       - ./google_key.json:/raidhelper/google_key.json
+      - ./config.json:/raidhelper/config.json
 
   watchtower:
     image: containrrr/watchtower
@@ -34,6 +35,6 @@ services:
     command: --interval 900
 
 networks:
-  pricebot:
+  raidhelper:
     name: raidhelper
     driver: bridge
