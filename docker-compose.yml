@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  pricebot:
+  raidhelper:
     image: znibb/raidhelper:latest
     container_name: raidhelper
     env_file:
@@ -16,7 +16,7 @@ services:
     networks:
       - raidhelper
     restart: unless-stopped
-    volume:
+    volumes:
       - ./google_key.json:/raidhelper/google_key.json
       - ./config.json:/raidhelper/config.json
 
