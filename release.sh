@@ -16,8 +16,8 @@ elif [[ $current_branch != "develop" ]]; then
 fi
 
 # Update version number
-sed -i "s/version=\".*\"/version=\"$version\"/" cogs/setup.py
-git add cogs/setup.py
+sed -i "s/botVersion=\".*\"/botVersion=\"$version\"/" bot.py
+git add bot.py
 git commit -m "Updated displayed version number to $version"
 
 # Push updates and merge with master
