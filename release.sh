@@ -22,9 +22,9 @@ git commit -m "Updated displayed version number to $version"
 
 # Push updates and merge with master
 git push origin develop
-git checkout master
+git checkout main
 git merge develop
-git push origin master
+git push origin main
 
 # Create and push tag for new version
 git tag -a $version -m "Release $version"
@@ -32,7 +32,7 @@ git push origin $version
 
 # Return to development branch
 git checkout develop
-git merge master
+git merge main
 git push origin develop
 
 # Build and push new docker images
