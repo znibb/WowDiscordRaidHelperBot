@@ -2,15 +2,14 @@ FROM python:3.8-slim-buster
 
 RUN adduser raidhelper
 
-RUN mkdir -p /raidhelper/cogs
+RUN mkdir -p /raidhelper
 
 WORKDIR /raidhelper
 
 COPY ./requirements.txt .
 RUN pip3 install -r requirements.txt
 
-COPY bot.py ./
-COPY ./cogs/setup.py ./cogs/usage.py ./cogs/
+COPY bot.py .
 
 RUN chown -R raidhelper:raidhelper .
 
