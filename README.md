@@ -5,7 +5,8 @@ For convenient automation of interactions with Google Sheets.
 ### File setup
 1. Create a project directory, e.g. `cd ~ && mkdir WowDiscordRaidHelperBot && cd WowDiscordRaidHelperBot`
 1. Download `docker-compoes.yml` to your docker host, e.g. `wget https://raw.githubusercontent.com/znibb/WowDiscordRaidHelperBot/master/docker-compose.yml`
-1. Copy template files, e.g. `cp .env-template .env && cp config.json-template config.json`
+1. Download `.env-remplate` to `.env`, e.g. `wget -O .env https://raw.githubusercontent.com/znibb/WowDiscordRaidHelperBot/main/.env-template`
+1. Download `config.json-template` to  `config.json`, e.g. `wget -O config.json https://raw.githubusercontent.com/znibb/WowDiscordRaidHelperBot/main/config.json-template` 
 1. Copy the channel IDs of the channel where you want the bot to listen to commands and output announcements to `BOT_CMD_CHANNEL_ID` and `BOT_ANNOUNCE_CHANNEL_ID` fields respectively in `.env`
 
 ### Discord
