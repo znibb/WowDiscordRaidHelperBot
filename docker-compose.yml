@@ -13,28 +13,7 @@ services:
       options:
         max-size: "200k"
         max-file: "10"
-    networks:
-      - raidhelper
     restart: unless-stopped
     volumes:
       - ./google_key.json:/raidhelper/google_key.json
       - ./config.json:/raidhelper/config.json
-
-  watchtower:
-    image: containrrr/watchtower
-    container_name: watchtower_raidhelper
-    environment:
-      - "WATCHTOWER_LABEL_ENABLE=true"
-    labels:
-      - "com.centurylinklabs.watchtower.enable=true"
-    networks:
-      - raidhelper
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 900
-
-networks:
-  raidhelper:
-    name: raidhelper
-    driver: bridge
