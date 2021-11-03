@@ -305,7 +305,8 @@ async def listraids(ctx):
 @bot.command(name='loadconfig', brief="Load config", aliases=['lc'])
 @restrictChannel()
 async def loadconfig(ctx):
-    await loadConfig(bot)
+    loadConfig(bot)
+    await ctx.send("Config loaded from file")
 
 @bot.command(name='lock', brief="Lock roster", usage="<raidID>", aliases=['l'])
 @restrictChannel()
