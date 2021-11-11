@@ -156,7 +156,6 @@ def updateConfirmed(rosterSheet, attendanceSheet, confirmedColumn):
     listOfCellsToUpdate = []
     listOfRowsToAdd = []
     attendanceColCount = attendanceSheet.col_count
-    newRowsToAdd = False
     for name in rosterNames:
         # If name is already present in the sheet
         if name in attendanceNames:
@@ -170,12 +169,11 @@ def updateConfirmed(rosterSheet, attendanceSheet, confirmedColumn):
             # Create new row and add to job list
             newRow = createNewAttendanceRow(name, confirmedColumn, attendanceColCount)
             listOfRowsToAdd.append(newRow)
-            # Flag that there's new rows to add
-            newRowsToAdd = True
 
     # Write updates to sheet
-    attendanceSheet.update_cells(listOfCellsToUpdate)
-    if newRowsToAdd:
+    if listOfCellsToUpdate:
+        attendanceSheet.update_cells(listOfCellsToUpdate)
+    if listOfRowsToAdd:
         attendanceSheet.append_rows(listOfRowsToAdd)
 
     return
