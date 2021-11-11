@@ -17,4 +17,4 @@ VOLUME /raidhelper
 
 USER raidhelper
 
-CMD python3 bot.py
+CMD python3 -u bot.py
