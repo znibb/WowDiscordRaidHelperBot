@@ -7,7 +7,7 @@ from discord.ext import commands
 from oauth2client.service_account import ServiceAccountCredentials
 
 # Version
-botVersion="1.0.2"
+botVersion="1.0.3"
 
 # Constants
 googleKeyFile = 'google_key.json'
