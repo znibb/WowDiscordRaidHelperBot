@@ -1,4 +1,4 @@
-.env
+.env*
 google_key.json
 config.json
 venv/
