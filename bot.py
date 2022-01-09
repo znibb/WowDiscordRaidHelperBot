@@ -172,9 +172,9 @@ def updateConfirmed(rosterSheet, attendanceSheet, confirmedColumn):
 
     # Write updates to sheet
     if listOfCellsToUpdate:
-        attendanceSheet.update_cells(listOfCellsToUpdate)
+        attendanceSheet.update_cells(listOfCellsToUpdate, 'USER_ENTERED')
     if listOfRowsToAdd:
-        attendanceSheet.append_rows(listOfRowsToAdd)
+        attendanceSheet.append_rows(listOfRowsToAdd, 'USER_ENTERED')
 
     return
 
@@ -206,9 +206,9 @@ def updateSignups(signupSheet, attendanceSheet, signedColumn):
 
     # Write updates to sheet
     if listOfCellsToUpdate:
-        attendanceSheet.update_cells(listOfCellsToUpdate)
+        attendanceSheet.update_cells(listOfCellsToUpdate, 'USER_ENTERED')
     if listOfRowsToAdd:
-        attendanceSheet.append_rows(listOfRowsToAdd)
+        attendanceSheet.append_rows(listOfRowsToAdd, 'USER_ENTERED')
 
     return
 
