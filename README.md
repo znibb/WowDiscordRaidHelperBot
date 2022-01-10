@@ -1,6 +1,8 @@
 # WowDiscordRaidHelperBot
 For convenient automation of interactions with Google Sheets.
 
+For change log check [CHANGELOG.md](./CHANGELOG.md)
+
 ## Setup
 ### File setup
 1. Create a project directory, e.g. `cd ~ && mkdir WowDiscordRaidHelperBot && cd WowDiscordRaidHelperBot`
