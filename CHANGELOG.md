@@ -1,4 +1,7 @@
 # Change log
+## 1.0.4
+- Fixed some breaking changes that came with upgrading gspread from 3.7.0 to 5.1.1
+
 ## 1.0.3
 ### Bug fixes
 - Fixed issue with attandance data being written as string which would cause issues with QUERYing due to multiple data types
