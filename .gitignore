@@ -1,5 +1,5 @@
 .env*
 google_key.json
-config.json
+config.json*
 venv/
 __pycache__/*
