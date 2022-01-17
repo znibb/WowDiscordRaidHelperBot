@@ -66,7 +66,7 @@ def createUpdateCell(name, names, values, dataColumn):
 	cellAddress = dataColumn + str(attendanceRowOffset+index)
 	(cellRow, cellCol) = gspread.utils.a1_to_rowcol(cellAddress)
 	# Create updated cell object
-	cell = gspread.models.Cell(cellRow, cellCol, value=newValue)
+	cell = gspread.cell.Cell(cellRow, cellCol, value=newValue)
 
 	return cell
 
