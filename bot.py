@@ -346,7 +346,10 @@ async def lock(ctx, raidID):
             except:
                 await ctx.send("User not found: " + name)
             else:
-                await user.send(generateConfirmedMessage(name, raidName, raidDay, raidTime))
+                try:
+                    await user.send(generateConfirmedMessage(name, raidName, raidDay, raidTime))
+                except:
+                    await ctx.send("User banned the bot: " + user)
         
         # Message standby players
         for name in standbyNames:
@@ -361,6 +364,9 @@ async def lock(ctx, raidID):
 
         # Announce publicly
         await bot.announceChannel.send("Roster for " + raidName + " has been **LOCKED**. <@&" + bot.config[raidID]["role"] + ">")
+
+        # Indicate jobis done
+        await ctx.send("Locking done")
 
 @bot.command(name='printconfig', brief="Print config", aliases=['pc'])
 @restrictChannel()
