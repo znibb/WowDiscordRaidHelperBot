@@ -1,5 +1,10 @@
 # Change log
+## 1.0.5
+### Bug fixes
+- Added handling for if a user has blocked the bot
+
 ## 1.0.4
+### Bug fixes
 - Fixed some breaking changes that came with upgrading gspread from 3.7.0 to 5.1.1
 
 ## 1.0.3
