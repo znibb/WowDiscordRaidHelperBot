@@ -1,4 +1,8 @@
 # Change log
+## 1.0.6
+### Bug fixes
+- Improved the release script
+
 ## 1.0.5
 ### Bug fixes
 - Added handling for if a user has blocked the bot
