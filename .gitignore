@@ -3,3 +3,4 @@ google_key.json
 config.json*
 venv/
 __pycache__/*
+*.log
