@@ -1,4 +1,8 @@
 # Change log
+## 1.0.7
+### Bug fixes
+- Fixed yet another bug introduced when jumping from gspread 3.7.0 to 5.1.1
+
 ## 1.0.6
 ### Bug fixes
 - Improved the release script
