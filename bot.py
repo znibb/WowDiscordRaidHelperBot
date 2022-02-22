@@ -349,7 +349,7 @@ async def lock(ctx, raidID):
                 try:
                     await user.send(generateConfirmedMessage(name, raidName, raidDay, raidTime))
                 except:
-                    await ctx.send("User banned the bot: " + user)
+                    await ctx.send("Unable to message user: " + name)
         
         # Message standby players
         for name in standbyNames:
