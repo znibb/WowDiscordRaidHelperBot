@@ -365,7 +365,7 @@ async def lock(ctx, raidID):
         # Announce publicly
         await bot.announceChannel.send("Roster for " + raidName + " has been **LOCKED**. <@&" + bot.config[raidID]["role"] + ">")
 
-        # Indicate jobis done
+        # Indicate job is done
         await ctx.send("Locking done")
 
 @bot.command(name='printconfig', brief="Print config", aliases=['pc'])
@@ -411,6 +411,9 @@ async def reset(ctx, raidID):
 
         # Announce publicly
         await bot.announceChannel.send("Signups for " + bot.config[raidID]["name"] + " has been **RESET**. <@&" + bot.config[raidID]["role"] + ">")
+
+        # Indicate job is done
+        await ctx.send("Reset done")
 
 @bot.command(name='version', brief="Show running version", aliases=['v'])
 @restrictChannel()
