@@ -1,4 +1,10 @@
 # Change log
+## 1.0.8
+### Bug fixes
+- Fixed an issue where an error message tried to concatenate a User object instead of the name of the user
+- Added status message that a reset action was completed (similar to how lock action has)
+- Changed command prefix from '!' to '-' to prevent conflict with CarlBot
+
 ## 1.0.7
 ### Bug fixes
 - Fixed yet another bug introduced when jumping from gspread 3.7.0 to 5.1.1
