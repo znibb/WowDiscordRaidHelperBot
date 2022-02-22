@@ -24,7 +24,7 @@ colours={
 ## Create bot
 intents = discord.Intents.default()
 intents.members = True
-bot = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents)
+bot = commands.Bot(command_prefix='-', case_insensitive=True, intents=intents)
 
 ## Load environment parameters
 load_dotenv()
